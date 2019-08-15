@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buscando o Caminho Mais Curto</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="header">
+    <nav class="navbar navbar-default no-margin">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="white navbar-toggle collapsed" data-toggle="collapse" id="collapseButton" data-target="" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="white icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="" id="title">Buscando o Caminho Mais Curto na Cidade de Toronto</div>
+          <div id="title-subtitle">Usando Análise em Grafos Para Encontrar o Caminho Mais Curto</div>
+        </div>
+        <div id="nav-right">
+          <div style="display:inline-block">Powered by</div>
+          <img id="logo" src="/img/google_logo.png">
+        </div>  
+      </div>
+    </nav>
+  </div>
+  <div id="content">
+    <div class="row no-gutters">
+      <div class="col-sm-3 col-xs-12" id="side-bar">
+        <div class="row">
+          <div class="col-xs-12">
+            <form id="route-calculator-form" action="address-submit">
+              <div class="form-group">
+                <input type="text" class="form-control" name="address_one" id="address_one" placeholder="40 Saint George St">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="address_two" id="address_two" placeholder="100 Bloor St W">
+              </div>
+              <button type="submit" onclick="" class="btn btn-default">Pesquisar</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 style="text-align: center">Direção</h4>
+            <div id="distance-box-wrapper">
+              Distância Total:
+              <div id="distance-box"></div>
+            </div>
+            <div id="loading" style="display:none">Carregando</div>
+            <div id="error" style="display:none">Erro. Verifique se os endereços são válidos. Por exemplo, você deve incluir o tipo de linha central (estrada, rua, avenida) e 'East' / 'West', se aplicável.</div>
+            <div style="overflow-y: scroll;" id="text-directions-box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 col-xs-12">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</body>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
